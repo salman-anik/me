@@ -1,21 +1,41 @@
-const skills = [
-  ["C","Programming","C"],["C++","Programming","C++"],["Python","Programming","Py"],
-  ["Java","Programming","J"],["JavaScript","Programming","JS"],["HTML","Web","<>"],
-  ["CSS","Web","#"],["React","Web","R"],["MySQL","Database","SQL"]
-];
+import { Code2, Braces, FileCode2, Coffee, Database, Globe, Palette } from 'lucide-react'
 
-export default function Skills() {
+const skills = [
+  ['C', Code2],
+  ['C++', Braces],
+  ['Python', FileCode2],
+  ['Java', Coffee],
+  ['JavaScript', FileCode2],
+  ['HTML', Globe],
+  ['CSS', Palette],
+  ['React', Code2],
+  ['MySQL', Database],
+]
+
+function Skills() {
   return (
-    <section className="section section-border" id="skills">
-      <div className="container">
-        <div className="section-heading"><p className="eyebrow">Skills</p><h2>What I Work With</h2><p>Technologies and programming languages I'm currently learning and working with.</p></div>
-        <div className="skills-grid">
-          {skills.map(([name, category, symbol]) => (
-            <div className="skill-card" key={name}><div className="skill-icon">{symbol}</div><div><h3>{name}</h3><p>{category}</p></div></div>
-          ))}
-        </div>
-        <div className="learning-note"><div className="learning-note-icon">DS</div><div><strong>Python for Data Science</strong><p>Currently learning and building my foundation in data-related programming.</p></div></div>
+    <section className="section-shell section" id="skills">
+      <div className="section-heading reveal">
+        <p className="eyebrow">02 / SKILLS</p>
+        <h2>What I Work With</h2>
+        <p className="section-intro">A growing toolkit built through coursework, practice, and continuous learning.</p>
+      </div>
+
+      <div className="skills-grid">
+        {skills.map(([name, Icon]) => (
+          <div className="skill-card reveal" key={name}>
+            <Icon size={22} strokeWidth={1.7} />
+            <span>{name}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="learning-note reveal">
+        <span>Currently learning</span>
+        <strong>Python for Data Science</strong>
       </div>
     </section>
-  );
+  )
 }
+
+export default Skills

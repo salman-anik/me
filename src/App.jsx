@@ -1,29 +1,31 @@
-import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Learning from "./components/Learning";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { useEffect, useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Education from './components/Education'
+import Learning from './components/Learning'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) return savedTheme === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('salman-theme')
+    if (saved) return saved
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  })
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", darkMode ? "dark" : "light");
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
+    document.documentElement.dataset.theme = theme
+    localStorage.setItem('salman-theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => setTheme((current) => current === 'light' ? 'dark' : 'light')
 
   return (
-    <div className="site-wrapper">
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+    <>
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />
@@ -34,8 +36,8 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App

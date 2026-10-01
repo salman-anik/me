@@ -1,3 +1,16 @@
-export default function Footer() {
-  return <footer className="footer"><div className="container footer-inner"><p>© {new Date().getFullYear()} Salman Anik. Built with React.</p><a href="#top">Back to top ↑</a></div></footer>;
+function Footer() {
+  const year = new Date().getFullYear()
+
+  return (
+    <footer className="footer">
+      <div className="section-shell footer-inner">
+        <span>© {year} Salman Anik. Built with React.</span>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          Back to top ↑
+        </button>
+      </div>
+    </footer>
+  )
 }
+
+export default Footer
