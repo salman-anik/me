@@ -94,18 +94,6 @@ I'm currently building projects to turn what I learn into practical experience.
 
 ---
 
-## 📊 GitHub Statistics
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=salman-anik&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&theme=transparent" />
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=salman-anik&layout=compact&hide_border=true&theme=transparent" />
-
-</div>
-
----
-
 ## 🔥 Contribution Activity
 
 <div align="center">
