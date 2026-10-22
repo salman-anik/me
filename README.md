@@ -5,7 +5,7 @@
 ### `CSE Student` · `Data Science Enthusiast` · `Developer`
 
 <p>
-  <a href="https://www.linkedin.com/in/salman-anik-5a7015294">
+  <a href="https://www.linkedin.com/in/salmananik">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:salmananik.bd@gmail.com">
